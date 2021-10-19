@@ -7,10 +7,14 @@ import { fauna } from "../../../services/fauna"
 export default NextAuth({
   // Configure one or more authentication providers
   providers: [
-    Providers.Google({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_API_KEY,
+    Providers.GitHub({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_API_KEY,
     }),
+   Providers.Google({
+     clientId:process.env.GOOGLE_ID_CLIENT,
+    clientSecret:process.env.GOOGLE_PUBLIC_KEY
+   })
    
   ],   
    jwt:{
@@ -37,7 +41,7 @@ export default NextAuth({
           ),
           q.Get(
             q.Match(
-              q.Index('user_by_email'),
+              q.Index('user_by_name'),
               q.Casefold(user.name)
             )
           )
