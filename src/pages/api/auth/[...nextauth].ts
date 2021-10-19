@@ -14,8 +14,7 @@ export default NextAuth({
    Providers.Google({
      clientId:process.env.GOOGLE_ID_CLIENT,
     clientSecret:process.env.GOOGLE_PUBLIC_KEY,
-    
-    
+     
    })
    
   ],   
