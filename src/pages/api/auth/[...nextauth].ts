@@ -7,13 +7,15 @@ import { fauna } from "../../../services/fauna"
 export default NextAuth({
   // Configure one or more authentication providers
   providers: [
-    Providers.GitHub({
+  /*  Providers.GitHub({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_API_KEY,
-    }),
+    }),*/
    Providers.Google({
      clientId:process.env.GOOGLE_ID_CLIENT,
-    clientSecret:process.env.GOOGLE_PUBLIC_KEY
+    clientSecret:process.env.GOOGLE_PUBLIC_KEY,
+    
+    
    })
    
   ],   
