@@ -24,7 +24,7 @@ export function LoginScreen (){
         </h1>
          
         <p className={styles.description}>
-           <button type="button" onClick={()=>signIn('github')} >Confirmar com GitHub</button>
+           <button type="button" onClick={()=>signIn()} >Confirmar com GitHub</button>
           
         </p>
       </main>
